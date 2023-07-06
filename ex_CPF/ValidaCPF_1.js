@@ -4,30 +4,21 @@
 // apresentation
 console.log('Validador de CPF');
 
-const cpf = '111.111.111-11';
+const cpf = '140.561.109-05';
 const cpfLimpo = cpf.replace(/\D+/g, '');
 const cpfArray = Array.from(cpfLimpo);
 let message = '';
-
 const cpfArrayNumbers = cpfArray.map((el) => {
     return parseInt(el);
 });
 
 const createDigit = (cpf) => {
-    // console.log(cpf.length + 2);
     let x = cpf.length + 2;
     const sumCpf = cpf.reduce((ac, el) => {
         x--;
-        // console.log(ac, el, x);
         return ac + (el * x);
     }, 0);
-    // console.log(sumCpf);
-    if (sumCpf % 11 < 2) {
-        cpf.push(0);
-    }  else {   
-        cpf.push(11 - (sumCpf % 11));
-    }
-    
+    (sumCpf % 11 < 2) ? cpf.push(0): cpf.push(11 - (sumCpf % 11));
     return cpf;
 }
 
@@ -42,10 +33,7 @@ const isSequence = (cpf) => {
 }
 
 const check_digits = (cpf) => {
-    // console.log(cpf);
-    // console.log(cpf.slice(0, 9));
     let cpf_d1 = createDigit(cpf.slice(0, 9));
-    // console.log(cpf_d1);
     let cpf_d2 = createDigit(cpf_d1);
     message = cpf_d2.join('') === cpfLimpo ? 'cpf válido' : 'cpf inválido';
     return cpf_d2.join('') === cpfLimpo;
