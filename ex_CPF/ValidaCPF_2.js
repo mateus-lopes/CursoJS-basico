@@ -1,12 +1,5 @@
 function ValidaCPF(cpfEnviado) {
-  // this.cpfLimpo = cpfEnviado.replace(/\D+/g, '');
-  // mesma coisa que:
-  Object.defineProperty(this, 'cpfLimpo', {
-    enumerable: true,
-    get: function() {
-      return cpfEnviado.replace(/\D+/g, '');
-    }
-  });
+  this.cpfLimpo = cpfEnviado.replace(/\D+/g, '');
 }
 
 ValidaCPF.prototype.valida = function() {
@@ -40,10 +33,9 @@ ValidaCPF.prototype.isSequencia = function() {
   return sequencia === this.cpfLimpo;
 };
 
-const cpf = new ValidaCPF('111.444.777-35');
-
-if(cpf.valida()) {
-  console.log('Cpf válido');
-} else {
-  console.log('Cpf inválido');
-}
+// const cpf = new ValidaCPF('111.444.777-35');
+// if(cpf.valida()) {
+//   console.log('Cpf válido');
+// } else {
+//   console.log('Cpf inválido');
+// }

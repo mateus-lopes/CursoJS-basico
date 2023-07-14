@@ -54,6 +54,7 @@ const validacpf = new ValidaCPF('111.444.777-35');
 const validacpf2 = new ValidaCPF('111.444.777-359');
 const validacpf3 = new ValidaCPF('999.999.999-99');
 const validacpf4 = new ValidaCPF('140.561.109-01');
+
 validacpf.valida();
 
 validacpf2.valida();

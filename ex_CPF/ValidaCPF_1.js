@@ -1,16 +1,9 @@
-// Validador de CPF
-// https://www.geradorcpf.com/algoritmo_do_cpf.htm
-
-// apresentation
-console.log('Validador de CPF');
+// Autor: Mateus Lopes Albano
+// Data: 23/09/2020
+// Descrição: Validação de CPF
 
 const cpf = '140.561.109-05';
-const cpfLimpo = cpf.replace(/\D+/g, '');
-const cpfArray = Array.from(cpfLimpo);
 let message = '';
-const cpfArrayNumbers = cpfArray.map((el) => {
-    return parseInt(el);
-});
 
 const createDigit = (cpf) => {
     let x = cpf.length + 2;
@@ -39,18 +32,20 @@ const check_digits = (cpf) => {
     return cpf_d2.join('') === cpfLimpo;
 };
 
-const cpfValido = (cpf, cpfLimpo) => {
-    if(check_lenght(cpf) != true) return false;
+const cpfValido = (cpf) => {
+    cpfLimpo = cpf.replace(/\D+/g, '');
+    cpfArray = Array.from(cpfLimpo);
+    cpfArrayNumbers = cpfArray.map((el) => {
+        return parseInt(el);
+    }); 
+    if(check_lenght(cpfArrayNumbers) != true) return false;
     if(isSequence(cpfLimpo)) return false;
-    return check_digits(cpf, cpfLimpo)
+    return check_digits(cpfArrayNumbers, cpfLimpo)
 }
 
-if (cpfValido(cpfArrayNumbers, cpfLimpo)){
-    console.log(`\n${cpf}\n\n${message}`);
-} else {
-    console.log(`\n${cpf}\n\n${message}`);
-}
-
-// 47 98823-2040
-
-// rua conselheiro art 650 bairro america, transversal da rua mas colin
+// apresenta menssagem de acordo com o retorno da função cpfValido
+// if (cpfValido(cpf)){
+//     console.log(`\n${cpf}\n\n${message}`);
+// } else {
+//     console.log(`\n${cpf}\n\n${message}`);
+// }
