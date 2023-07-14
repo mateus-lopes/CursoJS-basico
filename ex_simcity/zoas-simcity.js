@@ -52,6 +52,8 @@ function Game() {
             }
         ]
         this.navegate(main_menu)
+        console.log('\n\n')
+        this.showCity()
     }
 
     this.navegate = (agrs) => {
@@ -72,16 +74,16 @@ function Game() {
     // mostrar informações do usuário
     this.showUserInfo = (user, city) => `| ${user.nickname} | Nv ${user.nv} - ${user.xp}XP | Money in Bank: R$${user.money} | Criminality: ${city.criminality}`
 
-    // this.showCity = () => {
-    //     console.log('Informações sobre a Cidade:')
-    //     console.log(`Nome: ${this.city.name}`)
-    //     console.log(`Criminalidade: ${this.city.criminality}`)
-    //     console.log(`Estabelecimentos:`)
-    //     this.city.establishments.map((e, i) => {
-    //         console.log(`(${i}) ${e.name} - Nv ${e.required_nv} - ${e.profit_description}`)
-    //     })
-    //     console.log('\n(0) Voltar ')
-    // }
+    this.showCity = () => {
+        console.log('Informações sobre a Cidade:')
+        console.log(`Nome: ${this.city.name}`)
+        console.log(`Criminalidade: ${this.city.criminality}`)
+        console.log(`Estabelecimentos:`)
+        this.city.establishments.map((e, i) => {
+            console.log(`(${i}) ${e.name} - Nv ${e.required_nv} - ${e.profit_description}`)
+        })
+        console.log('\n(0) Voltar ')
+    }
 
     this.readData = datas => {
         // carregar info    rmações do banco de dados
