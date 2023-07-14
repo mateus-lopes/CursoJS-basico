@@ -1,0 +1,60 @@
+/* <div class="form-createAccount">
+    <form action="/" method="post">
+        <label for="first-name">Primeiro Nome</label>
+        <input class="form-control" type="text" name="first-name" id="first-name">
+        <label for="last-name">Segundo Nome</label>
+        <input class="form-control" type="text" name="last-name" id="last-name">
+        <label for="email">Email</label>
+        <input class="form-control" type="email" name="email" id="email">
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password">
+        <label for="password-confirm">Confirmar Senha</label>
+        <input class="form-control" type="password" name="password-confirm" id="password-confirm">
+        <button type="submit">Criar Conta</button>
+    </form>
+</div> */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e0770;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-createAccount {
+    min-width: 400px;
+    padding: 2em 1em;
+    margin: 0 auto;
+}
+.form-createAccount form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.form-control {
+    padding: 1em;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+.btn-submit {
+    background-color: #4b359b;
+    color: #fff;
+    border-color: #4b359b;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn-submit:hover {
+    background-color: #fff;
+    color: #3a2197;
+    border-color: #3a2197;
+}
+
+.error-text {
+    font-size: 14px;
+    color: #ffabab;
+}
