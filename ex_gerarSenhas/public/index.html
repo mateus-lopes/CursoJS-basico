@@ -10,32 +10,30 @@
 
 <body>
   <section class="container">
-    <div class="range">
-      <code id="password">
-      </code>
-      <div>
-        <label for="range">Quantidade de Carácteres</label>
-      </div>
-      <input type="range" name="range" id="range" min="4" max="24" value="8">
-      <ul class="settings">
-        <li>
-          <input type="checkbox" name="withNumber" id="withNumber">
-          <label for="withNumber"> Números </label>
-        </li>
-        <li>
-          <input type="checkbox" name="withUpper" id="withUpper">
-          <label for="withUpper"> Maiúsculas </label>
-        </li>
-        <li>
-          <input type="checkbox" name="withLower" id="withLower">
-          <label for="withLower"> Minúsculas </label>
-        </li>
-        <li>
-          <input type="checkbox" name="withSymbol" id="withSymbol">
-          <label for="withSymbol"> Símbolos </label>
-        </li>
-      </ul>
+    <code id="password">
+    </code>
+    <div class="div-range">
+      <label for="range">Quantidade de Carácteres</label>
     </div>
+    <input type="range" name="range" id="range" min="4" max="24" value="8">
+    <ul class="settings">
+      <li>
+        <input type="checkbox" name="withNumber" id="withNumber">
+        <label for="withNumber"> Números </label>
+      </li>
+      <li>
+        <input type="checkbox" name="withUpper" id="withUpper">
+        <label for="withUpper"> Maiúsculas </label>
+      </li>
+      <li>
+        <input type="checkbox" name="withLower" id="withLower">
+        <label for="withLower"> Minúsculas </label>
+      </li>
+      <li>
+        <input type="checkbox" name="withSymbol" id="withSymbol">
+        <label for="withSymbol"> Símbolos </label>
+      </li>
+    </ul>
     <div>
       <button id="generate"> Nova Senha (<span class="range-value">8</span>) </button>
     </div>
