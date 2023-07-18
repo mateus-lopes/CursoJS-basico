@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+td {
+  background-color: #f1f1f1;
+  color: #093038;
+  border: none;
+  padding: 2em 4em;
+  cursor: pointer;
+  box-shadow: 0 0 10px #0000004d;
+  transition: all 0.3s ease-in-out;
+}
+
+td:hover {
+  background: #888;
+  color: #f1f1f1;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+}
+
+.display {
+  padding: 0;
+  text-align: right;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.display input {
+  text-align: right;
+  width: 80%;
+  padding: 2em 1em;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.display:hover {
+  background-color: #f1f1f1;
+}
+
+input:focus  {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.btn-del {
+  background-color: #5e0f0f;
+  color: #f1f1f1;
+}
+
+.btn-del:hover {
+  background-color: #a13131;
+}
+
+.btn-eq {
+  background-color: #093038;
+  color: #f1f1f1;
+}
+
+.btn-eq:hover {
+  background: #074857;
+  color: #f1f1f1;
+}
+
+.btn-clear {
+  background-color: #c0720d;
+  color: #f1f1f1;
+}
+
+.btn-clear:hover {
+  background-color: #ff9100;
+  color: #f1f1f1;
+}

@@ -5,59 +5,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Modelo</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Calculadora JS</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <section class="container">
-    <h1>Calculadora</h1>
-
     <table class="calculadora">
       <tr>
-        <td colspan="4"><input type="text" class="display"></td>
+        <td colspan="4" class="display"><input type="text" class="display-input"></td>
+      </tr>
+      <tr>
+        <td class="btn-clear">C</td>
+        <td class="btn-num">(</td>
+        <td class="btn-num">)</td>
+        <td class="btn-num">/</td>
       </tr>
 
       <tr>
-        <td><button class="btn btn-clear">C</button></td>
-        <td><button class="btn btn-num">(</button></td>
-        <td><button class="btn btn-num">)</button></td>
-        <td><button class="btn btn-num">/</button></td>
+        <td class="btn-num">7</td>
+        <td class="btn-num">8</td>
+        <td class="btn-num">9</td>
+        <td class="btn-num">*</td>
       </tr>
 
       <tr>
-        <td><button class="btn btn-num">7</button></td>
-        <td><button class="btn btn-num">8</button></td>
-        <td><button class="btn btn-num">9</button></td>
-        <td><button class="btn btn-num">*</button></td>
+        <td class="btn-num">4</td>
+        <td class="btn-num">5</td>
+        <td class="btn-num">6</td>
+        <td class="btn-num">+</td>
       </tr>
 
       <tr>
-        <td><button class="btn btn-num">4</button></td>
-        <td><button class="btn btn-num">5</button></td>
-        <td><button class="btn btn-num">6</button></td>
-        <td><button class="btn btn-num">+</button></td>
+        <td class="btn-num">1</td>
+        <td class="btn-num">2</td>
+        <td class="btn-num">3</td>
+        <td class="btn-num">-</td>
       </tr>
 
       <tr>
-        <td><button class="btn btn-num">1</button></td>
-        <td><button class="btn btn-num">2</button></td>
-        <td><button class="btn btn-num">3</button></td>
-        <td><button class="btn btn-num">-</button></td>
-      </tr>
-
-      <tr>
-        <td><button class="btn btn-num">.</button></td>
-        <td><button class="btn btn-num">0</button></td>
-        <td><button class="btn btn-del">&laquo;</button></td>
-        <td><button class="btn btn-eq">=</button></td>
+        <td class="btn-num"><b>.</b></td>
+        <td class="btn-num">0</td>
+        <td class="btn-del">del</td>
+        <td class="btn-eq">=</td>
       </tr>
     </table>
 
   </section>
 
-  <script src="./assets/js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
