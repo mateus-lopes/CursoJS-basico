@@ -29,7 +29,7 @@ body {
   border-radius: 10px;
 }
 
-.btn-run {
+#generate {
   background: #f1f1f1;
   color: #093038;
   border: none;
@@ -39,6 +39,16 @@ body {
   margin: 1em 0 0 0;
   box-shadow: 0 0 10px #0000004d;
   transition: all 0.3s ease-in-out;
+}
+
+#password {
+  margin: 1em 0;
+  color: #11819b;
+  font-size: 1.3em;
+}
+
+#password.error {
+  color: #b84040;
 }
 
 .settings {

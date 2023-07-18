@@ -1,9 +1,10 @@
+import PasswordLength from './modules/PasswordLength';
+import GeneratePassword from './modules/GeneratePassword';
 import './assets/css/style.css';
 
 (function() {
-    const btnRange = document.querySelector('#range');
-    const rangeValue = document.querySelector('.range-value');
-    btnRange.addEventListener('click', () => {
-        rangeValue.innerHTML = btnRange.value;
-    });
+    const passwordLength = new PasswordLength();
+    const generatePassword = new GeneratePassword();
+    passwordLength.init();
+    generatePassword.init();
 })();
