@@ -28,7 +28,6 @@ export default class GeneratePassword {
         const withUppercase = this.withUppercase.checked;
         const withLowercase = this.withLowercase.checked;
         this.password.innerHTML = this.createPassword(length, withNumber, withSymbol, withUppercase, withLowercase);
-        console.log(this.password.innerHTML.length);
     }
     createPassword(length, withNumber, withSymbol, withUppercase, withLowercase) {
         if((withNumber || withSymbol || withUppercase || withLowercase) === false){
@@ -39,9 +38,6 @@ export default class GeneratePassword {
             const newPassword = [];
             while(newPassword.length < length) {
                 newPassword.push(this.generateChar(withNumber, withSymbol, withUppercase, withLowercase));
-            }
-            if(this.password.innerHTML.includes('<!--')) {
-                this.createPassword(length, withNumber, withSymbol, withUppercase, withLowercase);
             }
             return `${newPassword.join('')}`
         }
